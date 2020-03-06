@@ -32,7 +32,7 @@ class _SignInState extends State<SignIn> {
           Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("images/Back1.jpg"), // background image
+                  image: AssetImage("images/background1.jpg"), // background image
                   fit: BoxFit.cover,
                 )
             ),
@@ -45,7 +45,7 @@ class _SignInState extends State<SignIn> {
               Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("images/Back1.jpg"),
+                        image: AssetImage("images/background1.jpg"),
                         fit: BoxFit.cover,
                       )
                   ),
@@ -122,6 +122,22 @@ class _SignInState extends State<SignIn> {
                             Text(
                               error,
                               style: TextStyle(color: Colors.red, fontSize: 14.0),
+                            ),
+                            SizedBox(height: 20.0),
+                            RaisedButton(
+                              color: Colors.blue[900],
+                              shape: RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(1000.0),
+                                side: BorderSide(color: Colors.blue[900]),
+                              ),
+
+                              child: Text(
+                                'Register',
+                                style: TextStyle(color: Colors.white),
+                              ),
+                              onPressed: () async {
+                                widget.toggleView();
+                              },
                             ),
                           ]
                       ),
