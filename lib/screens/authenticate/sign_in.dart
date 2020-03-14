@@ -27,28 +27,17 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return loading ? Loading():
-    Stack(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("images/background1.jpg"), // background image
-                  fit: BoxFit.cover,
-                )
-            ),
-          ),
-//    return loading ? Loading():
-
           Scaffold(
               backgroundColor: Colors.transparent,
               body:
               Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("images/background1.jpg"),
+                        image: AssetImage("images/Background.jpg"),
                         fit: BoxFit.cover,
                       )
                   ),
+                  constraints: BoxConstraints.expand(),
                   padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
                   child:
                   Form(
@@ -144,8 +133,6 @@ class _SignInState extends State<SignIn> {
                     ),
                   )
               )
-          )
-        ]
-    );
+          );
   }
 }
