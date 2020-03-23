@@ -84,7 +84,7 @@ class Home extends StatelessWidget {
                               ListTile(
                                 leading: Icon(Icons.settings),
                                 title: Text("Sign Out"),
-                                onTap:  
+//                                onTap:
                               )
                             ],
                           )
