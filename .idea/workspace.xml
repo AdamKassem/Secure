@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4da6e2bb-da6a-4ff2-8ee7-5677c92dd555" name="Default Changelist" comment="User-Authentication -- updated login page&#10;-- added a register button to go to register page">
-      <change afterPath="$PROJECT_DIR$/images/Background.jpg" afterDir="false" />
+    <list default="true" id="4da6e2bb-da6a-4ff2-8ee7-5677c92dd555" name="Default Changelist" comment="Screens-- Rank passwords page has been updated">
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/database.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/fav.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/insta.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/passwords.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/authenticate/sign_in.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/authenticate/sign_in.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/home/home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/home/home.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/settings/settings.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/settings/settings.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
@@ -25,34 +29,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/screens/authenticate/sign_in.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/screens/home/home.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/screens/wrapper.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="2985">
+              <caret line="204" column="58" selection-start-line="204" selection-start-column="58" selection-end-line="204" selection-end-column="58" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -61,10 +41,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/screens/home/passwords.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
+            <state relative-caret-position="375">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -77,6 +69,11 @@
         <option value="Dart File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>top</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,19 +95,23 @@
         <option value="$PROJECT_DIR$/lib/services/database.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/screens/settings/settings.dart" />
-        <option value="$PROJECT_DIR$/lib/screens/authenticate/register.dart" />
         <option value="$PROJECT_DIR$/lib/screens/wrapper.dart" />
         <option value="$PROJECT_DIR$/lib/screens/authenticate/sign_in.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/home/insta.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/home/database.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/authenticate/register.dart" />
+        <option value="$PROJECT_DIR$/lib/screens/home/fav.dart" />
         <option value="$PROJECT_DIR$/lib/screens/home/home.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/lib/screens/home/passwords.dart" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="428" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="442" />
     <option name="y" value="23" />
-    <option name="width" value="1012" />
-    <option name="height" value="804" />
+    <option name="width" value="998" />
+    <option name="height" value="829" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -128,11 +129,6 @@
             <path>
               <item name="Secure" type="b2602c69:ProjectViewProjectNode" />
               <item name="Secure" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Secure" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Secure" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -144,14 +140,16 @@
             <path>
               <item name="Secure" type="b2602c69:ProjectViewProjectNode" />
               <item name="Secure" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -238,9 +236,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="428" y="23" width="1012" height="804" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22268042" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1223176" />
       <window_info id="Captures" order="1" side_tool="true" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -250,7 +249,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="0" weight="0.32719547" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49932885" visible="true" weight="0.2485955" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49932885" weight="0.21573949" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Android Profiler" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="4" />
@@ -258,8 +257,8 @@
       <window_info anchor="bottom" id="Terminal" order="6" weight="0.20843373" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067115" side_tool="true" weight="0.3272472" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3286119" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.043373495" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.3286517" />
+      <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.19759037" />
+      <window_info anchor="bottom" id="Find" order="10" weight="0.22252375" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -273,7 +272,8 @@
     <MESSAGE value="User-Authentication" />
     <MESSAGE value="User-Authentication -- updated login page" />
     <MESSAGE value="User-Authentication -- updated login page&#10;-- added a register button to go to register page" />
-    <option name="LAST_COMMIT_MESSAGE" value="User-Authentication -- updated login page&#10;-- added a register button to go to register page" />
+    <MESSAGE value="Screens-- Rank passwords page has been updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Screens-- Rank passwords page has been updated" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/build/last_build_run.json" />
@@ -387,30 +387,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/authenticate/register.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="113" column="3" selection-start-line="113" selection-start-column="3" selection-end-line="122" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/screens/wrapper.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/screens/home/home.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -427,10 +407,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/authenticate/register.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="126" column="27" lean-forward="true" selection-start-line="126" selection-start-column="27" selection-end-line="126" selection-end-column="27" />
+          <folding>
+            <element signature="e#28#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/home/database.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/home/fav.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="71" column="73" selection-start-line="71" selection-start-column="73" selection-end-line="71" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/home/insta.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/home/home.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2985">
+          <caret line="204" column="58" selection-start-line="204" selection-start-column="58" selection-end-line="204" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="4" />
+        <state relative-caret-position="375">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/screens/home/passwords.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

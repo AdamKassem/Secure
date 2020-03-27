@@ -1,0 +1,147 @@
+import 'package:flutter/material.dart';
+import 'package:secure/screens/home/database.dart';
+import 'package:secure/screens/home/fav.dart';
+import 'package:secure/screens/home/insta.dart';
+import 'package:smooth_star_rating/smooth_star_rating.dart';
+import 'package:secure/screens/settings/settings.dart';
+
+// this is basically the home page...
+// shows the top five passwords
+
+class Passwords extends StatefulWidget {
+  final Function toggleView;
+  Passwords({this.toggleView});
+  @override
+  _PasswordsState createState() => new _PasswordsState();
+}
+
+class _PasswordsState extends State<Passwords> {
+  List items = getDummyList();
+  var rate = 0.0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Rank Passwords'),
+          centerTitle: true,
+          backgroundColor: Colors.indigo,
+          elevation: 0.0,
+        ),
+
+        // NEED TO IMPLEMENT THE REFRESH FUNCTION ***************************
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.refresh),
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.amber[900],
+          onPressed: () {},
+          heroTag: "btn2", // tag all FABS to avoid errors continueing
+        ),
+        // background image
+        body: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage('images/Background.jpg'),
+                    fit: BoxFit.cover
+                )
+            ),
+            constraints: BoxConstraints.expand(),
+
+            // creates the array to hold the number of each card
+            // listview calls the function
+            child: ListView.builder(
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  return Card( // what the listview returns
+                    elevation: 20,
+                    child: Container(
+                      height: 100.0,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Container( // contains the rest of the card
+                            height: 90,
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    items[index],
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 1, 0, 1),
+                                    child: Container(
+                                      width: 50,
+                                      decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Colors.teal),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10))
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
+                                    child: Container(
+                                      width: 300,
+                                      child: Text(
+                                        "Displaying Password", style: TextStyle(
+                                          fontSize: 15,
+                                          color: Color.fromARGB(255, 48, 48, 54)
+                                      ),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SmoothStarRating(
+                              allowHalfRating: false,
+                              onRatingChanged: (value) {
+                                setState(() {
+                                  rate = value;
+                                });
+                              },
+                              starCount: 5,
+                              rating: rate,
+                              size: 30.0,
+                              filledIconData: Icons.star,
+                              halfFilledIconData: Icons.star_half,
+                              defaultIconData: Icons.star_border,
+                              color: Colors.yellow,
+                              borderColor: Colors.yellow,
+                              spacing:0.0
+                          )
+                        ],
+                      ),
+
+                    ),
+                  );
+
+                })
+        )
+    );
+  }
+
+  static List getDummyList() {
+    List list = List.generate(5, (i) {
+      return "Password ${i + 1}: ";
+    });
+    return list;
+  }
+}
+
+navigateToFav(context) async{
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Fav()));
+}
+navigateToDatabase(context) async{
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Database()));
+}
+navigateToInsta(context) async{
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Insta()));
+}
+
+
