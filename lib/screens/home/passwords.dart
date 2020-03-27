@@ -61,7 +61,7 @@ class _PasswordsState extends State<Passwords> {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           Container( // contains the rest of the card
-                            height: 90,
+                            height: 80,
                             child: Padding(
                               padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
                               child: Column(
@@ -70,10 +70,8 @@ class _PasswordsState extends State<Passwords> {
                                   Text(
                                     items[index],
                                   ),
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(0, 1, 0, 1),
-                                    child: Container(
-                                      width: 50,
+                                 Container(
+                                      width: 50, // length of border line
                                       decoration: BoxDecoration(
                                           border: Border.all(
                                               color: Colors.teal),
@@ -81,11 +79,12 @@ class _PasswordsState extends State<Passwords> {
                                               Radius.circular(10))
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
-                                    child: Container(
-                                      width: 300,
+                                  Row(
+//                                  Padding(
+//                                    padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
+                                    children: <Widget>[
+                                      Container(
+                                      width: 250,
                                       child: Text(
                                         "Displaying Password", style: TextStyle(
                                           fontSize: 15,
@@ -93,34 +92,33 @@ class _PasswordsState extends State<Passwords> {
                                       ),
                                       ),
                                     ),
-                                  ),
+                                      SmoothStarRating(
+                                          allowHalfRating: false,
+                                          onRatingChanged: (value) {
+                                            setState(() {
+                                              rate = value;
+                                            });
+                                          },
+                                          starCount: 5,
+                                          rating: rate,
+                                          size: 20.0,
+                                          filledIconData: Icons.star,
+                                          halfFilledIconData: Icons.star_half,
+                                          defaultIconData: Icons.star_border,
+                                          color: Colors.yellow,
+                                          borderColor: Colors.yellow,
+                                          spacing:0.0
+                                      )
+                                  ]),
                                 ],
                               ),
                             ),
                           ),
-                          SmoothStarRating(
-                              allowHalfRating: false,
-                              onRatingChanged: (value) {
-                                setState(() {
-                                  rate = value;
-                                });
-                              },
-                              starCount: 5,
-                              rating: rate,
-                              size: 30.0,
-                              filledIconData: Icons.star,
-                              halfFilledIconData: Icons.star_half,
-                              defaultIconData: Icons.star_border,
-                              color: Colors.yellow,
-                              borderColor: Colors.yellow,
-                              spacing:0.0
-                          )
+
                         ],
                       ),
-
                     ),
                   );
-
                 })
         )
     );
