@@ -18,6 +18,8 @@ class Passwords extends StatefulWidget {
 class _PasswordsState extends State<Passwords> {
   List items = getDummyList();
   var rate = 0.0;
+  bool click = false;
+  int clickCount = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +86,7 @@ class _PasswordsState extends State<Passwords> {
 //                                    padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
                                     children: <Widget>[
                                       Container(
-                                      width: 250,
+                                      width: 200,
                                       child: Text(
                                         "Displaying Password", style: TextStyle(
                                           fontSize: 15,
@@ -108,13 +110,23 @@ class _PasswordsState extends State<Passwords> {
                                           color: Colors.yellow,
                                           borderColor: Colors.yellow,
                                           spacing:0.0
+                                      ),
+                                      IconButton(
+                                        icon: Icon(Icons.bookmark),
+                                        color: click && clickCount % 2 == 1 ? Colors.red : Colors.grey,
+                                        iconSize: 20,
+                                        onPressed: () {
+                                         setState(() {
+                                           click = true;
+                                           clickCount++;
+                                         });// HOW DO YOU SEND THE CARD TO DATABASE
+                                        },
                                       )
                                   ]),
                                 ],
                               ),
                             ),
                           ),
-
                         ],
                       ),
                     ),

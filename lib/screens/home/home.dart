@@ -121,7 +121,7 @@ class _HomeState extends State<Home>{
                       children: <Widget>[
                         Icon(
                           Icons.star,
-                          color: currentTab == 0 ? Colors.white : Colors.grey,
+                          color: currentTab == 0 ? Colors.yellow : Colors.grey,
                         ),
                         Text(
                           'Favorites',
@@ -145,11 +145,11 @@ class _HomeState extends State<Home>{
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.folder,
-                          color: currentTab == 1 ? Colors.white : Colors.grey,
+                          Icons.bookmark,
+                          color: currentTab == 1 ? Colors.red : Colors.grey,
                         ),
                         Text(
-                          'Database',
+                          'Saved',
                           style: TextStyle(
                             color: currentTab == 1 ? Colors.white : Colors.grey,
                           ),
@@ -181,7 +181,7 @@ class _HomeState extends State<Home>{
                       children: <Widget>[
                         Icon(
                           Icons.center_focus_weak,
-                          color: currentTab == 2 ? Colors.white : Colors.grey,
+                          color: currentTab == 2 ? Colors.pink : Colors.grey,
                         ),
                         Text(
                           'Profile',
