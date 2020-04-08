@@ -27,7 +27,7 @@ class _FavState extends State<Fav> {
         body: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/Background.jpg'),
+                    image: AssetImage('images/bg.jpg'),
                     fit: BoxFit.cover
                 )
             ),

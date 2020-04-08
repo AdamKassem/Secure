@@ -1,65 +1,39 @@
-
-//import 'dart:html';
-
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:secure/screens/authenticate/register2.dart';
-import 'package:secure/screens/survey/prompt.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:secure/screens/survey/surpb.dart';
 import 'package:secure/services/auth.dart';
 import 'package:secure/services/database.dart';
 import 'package:secure/shared/constants.dart';
 import 'package:secure/shared/loading.dart';
+import 'package:secure/screens/settings/settings.dart';
 
-
-class Register extends StatefulWidget {
-
+class Surveyp extends StatefulWidget {
   final Function toggleView;
-  Register({this.toggleView});
+  Surveyp({this.toggleView});
 
   @override
-  _RegisterState createState() => _RegisterState();
+  _Surveyp createState() => new _Surveyp();
+// _MyHomePageState createState() => new _MyHomePageState();
+
 }
 
-class _RegisterState extends State<Register> {
-
+class _Surveyp extends State<Surveyp> {
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
   bool loading = false;
 
-  // Text field state
-  String firstName = '';
-  String lastName = '';
-  String email = '';
-  String password = '';
-  String confirmP = '';
+  String Qone = '';
+  String Qtwo = '';
+  String Qthree = '';
+  String Qfour = '';
+  String Qfive = '';
   String error = '';
 
   @override
   Widget build(BuildContext context) {
-    return loading ? Loading() : Scaffold(
-
-      //backgroundColor: Colors.lightBlue[50], //Colors.grey[900],
-      /*
-        appBar: AppBar(
-          backgroundColor: Colors.indigo[700],
-          elevation: 0.0,
-          title: Text('New User? Create an Account'),
-          centerTitle: true,
-          /* Code to view Sign in button on top right hand corner on sign up page
-          actions: <Widget>[
-            FlatButton.icon(
-                icon: Icon(Icons.person),
-                label: Text('Sign In'),
-                onPressed: (){
-                  widget.toggleView();
-                }
-            )
-          ],*/
-        ),*/
-
-
-
+    return Scaffold(
         body: Container(
-
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('images/bg.jpg'),
@@ -77,9 +51,8 @@ class _RegisterState extends State<Register> {
                     child: Column(
                       //mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-
                           Container(
-                              height: 350.0,
+                              height: 600.0,
                               width: 450.0,
                               decoration: BoxDecoration(
                                   color: Colors.white,
@@ -96,26 +69,20 @@ class _RegisterState extends State<Register> {
                               ),
 
                               child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
                                   children: <Widget>[
+
+
+                                    //child: Column(
+                                    // children: <Widget>[
                                     SizedBox(height: 30.0),
                                     TextFormField(
                                       decoration: textInputDecoration.copyWith(
-                                          hintText: 'First Name'),
-                                      /*decoration: new InputDecoration(
-                              labelText:"First Name",
-                              fillColor: Colors.white,
-                              filled: true,
-                              border: new OutlineInputBorder(borderRadius: new BorderRadius.circular (35.0),
-                                //borderSide: new BorderSide(color: Colors.pink, width: 2.0),
-                              )
-                              ),
-*/
-                                      validator: (val) =>
-                                      val.isEmpty
-                                          ? 'Enter your First Name'
-                                          : null,
+                                          hintText: 'Question 1'),
+
+                                      validator: (val) => val.isEmpty? 'Please enter answer': null,
                                       onChanged: (val) {
-                                        setState(() => firstName = val);
+                                        setState(() => Qone = val);
                                       },
 
                                       keyboardType: TextInputType.text,
@@ -125,20 +92,11 @@ class _RegisterState extends State<Register> {
                                     ),
                                     SizedBox(height: 30.0),
                                     TextFormField(
-                                      decoration: textInputDecoration.copyWith(
-                                          hintText: 'Last Name'),
-                                      /*decoration: new InputDecoration(
-                                    labelText:"Last Name",
-                                    fillColor: Colors.white,
-                                    filled: true,
-                                    border: new OutlineInputBorder(borderRadius: new BorderRadius.circular (35.0),
-                                      //borderSide: new BorderSide(color: Colors.pink, width: 2.0),
-                                    )*/
+                                      decoration: textInputDecoration.copyWith(hintText: 'Question 2'),
 
-
-                                      validator: (val) => val.isEmpty ? 'Enter your Last Name' : null,
+                                      validator: (val) => val.isEmpty ? 'Please Enter your answer' : null,
                                       onChanged: (val) {
-                                        setState(() => lastName = val);
+                                        setState(() => Qtwo = val);
                                       },
 
                                       keyboardType: TextInputType.text,
@@ -147,6 +105,51 @@ class _RegisterState extends State<Register> {
                                       ),
                                     ),
 
+                                    SizedBox(height: 30.0),
+                                    TextFormField(
+                                      decoration: textInputDecoration.copyWith(
+                                          hintText: 'Question 3'),
+
+                                      validator: (val) => val.isEmpty? 'Please enter answer': null,
+                                      onChanged: (val) {
+                                        setState(() => Qthree = val);
+                                      },
+
+                                      keyboardType: TextInputType.text,
+                                      style: new TextStyle(
+                                        fontFamily: "Poppins",
+                                      ),
+                                    ),
+                                    SizedBox(height: 30.0),
+                                    TextFormField(
+                                      decoration: textInputDecoration.copyWith(hintText: 'Question 4'),
+
+                                      validator: (val) => val.isEmpty ? 'Please Enter your answer' : null,
+                                      onChanged: (val) {
+                                        setState(() => Qfour = val);
+                                      },
+
+                                      keyboardType: TextInputType.text,
+                                      style: new TextStyle(
+                                        fontFamily: "Poppins",
+                                      ),
+                                    ),
+
+                                    SizedBox(height: 30.0),
+                                    TextFormField(
+                                      decoration: textInputDecoration.copyWith(
+                                          hintText: 'Question 5'),
+
+                                      validator: (val) => val.isEmpty? 'Please enter answer': null,
+                                      onChanged: (val) {
+                                        setState(() => Qfive = val);
+                                      },
+
+                                      keyboardType: TextInputType.text,
+                                      style: new TextStyle(
+                                        fontFamily: "Poppins",
+                                      ),
+                                    ),
                                     SizedBox(height: 15.0),
                                     RaisedButton(
 
@@ -158,7 +161,7 @@ class _RegisterState extends State<Register> {
                                                 color: Colors.indigo[700])
                                         ),
                                         child: Text(
-                                            'Next',
+                                            'Continue',
                                             style: TextStyle(
                                                 color: Colors.white)
                                         ),
@@ -167,7 +170,7 @@ class _RegisterState extends State<Register> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      Register2())
+                                                      Surpb())// to survey page b
                                           );
                                         }
                                     ),
@@ -180,13 +183,13 @@ class _RegisterState extends State<Register> {
 
                                   ]
                               )
-                          ),
+                          )
                         ]
+
                     )
                 )
             )
         )
-
     );
   }
 }
