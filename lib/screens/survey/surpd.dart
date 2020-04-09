@@ -2,6 +2,8 @@
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:secure/screens/home/home.dart';
+import 'package:secure/screens/survey/surveythanks.dart';
 import 'package:secure/services/auth.dart';
 import 'package:secure/services/database.dart';
 import 'package:secure/shared/constants.dart';
@@ -89,10 +91,40 @@ class _Surpd extends State<Surpd> {
 
                                     //child: Column(
                                     // children: <Widget>[
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  "   16. What’s the name of the primary school you attended?",
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
                                     TextFormField(
                                       decoration: textInputDecoration.copyWith(
-                                          hintText: 'Question 16'),
+                                          hintText: 'Question 16',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty? 'Please enter answer': null,
                                       onChanged: (val) {
@@ -104,9 +136,39 @@ class _Surpd extends State<Surpd> {
                                         fontFamily: "Poppins",
                                       ),
                                     ),
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  "   17. What is your desired job?",
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
                                     TextFormField(
-                                      decoration: textInputDecoration.copyWith(hintText: 'Question 17'),
+                                      decoration: textInputDecoration.copyWith(hintText: 'Question 17',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty ? 'Please Enter your answer' : null,
                                       onChanged: (val) {
@@ -119,10 +181,40 @@ class _Surpd extends State<Surpd> {
                                       ),
                                     ),
 
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  "   18. Which city or town did your parents meet in?",
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
                                     TextFormField(
                                       decoration: textInputDecoration.copyWith(
-                                          hintText: 'Question 18'),
+                                          hintText: 'Question 18',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty? 'Please enter answer': null,
                                       onChanged: (val) {
@@ -134,9 +226,39 @@ class _Surpd extends State<Surpd> {
                                         fontFamily: "Poppins",
                                       ),
                                     ),
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  "   19. What is the name of your first stuffed animal?",
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
                                     TextFormField(
-                                      decoration: textInputDecoration.copyWith(hintText: 'Question 19'),
+                                      decoration: textInputDecoration.copyWith(hintText: 'Question 19',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty ? 'Please Enter your answer' : null,
                                       onChanged: (val) {
@@ -149,10 +271,40 @@ class _Surpd extends State<Surpd> {
                                       ),
                                     ),
 
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  "   20. What is the middle name of a close family member?",
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
                                     TextFormField(
                                       decoration: textInputDecoration.copyWith(
-                                          hintText: 'Question 20'),
+                                          hintText: 'Question 20',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty? 'Please enter answer': null,
                                       onChanged: (val) {
@@ -164,31 +316,30 @@ class _Surpd extends State<Surpd> {
                                         fontFamily: "Poppins",
                                       ),
                                     ),
-                                    SizedBox(height: 15.0),
+                                    //SizedBox(height: 15.0),
                                     RaisedButton(
-
-                                        color: Colors.indigo[700],
+                                        color: Colors.lightBlue[600],
                                         shape: RoundedRectangleBorder(
                                             borderRadius: new BorderRadius
                                                 .circular(1000.0),
                                             side: BorderSide(
-                                                color: Colors.indigo[700])
+                                                color: Colors.lightBlue[600])
                                         ),
                                         child: Text(
-                                            'Finish',
+                                            'Continue',
                                             style: TextStyle(
                                                 color: Colors.white)
                                         ),
-                                       /* onPressed: () {
+                                        onPressed: () {
                                           Navigator.push(
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      Surpc())
+                                                      Surveythanks())
                                           );
-                                        }*/
+                                        }
                                     ),
-                                    SizedBox(height: 15.0),
+                                    //SizedBox(height: 15.0),
                                     Text(
                                       error,
                                       style: TextStyle(

@@ -67,18 +67,19 @@ class _RegisterState extends State<Register> {
             ),
             constraints: BoxConstraints.expand(),
 
-            padding: EdgeInsets.symmetric(vertical: 25.0, horizontal: 25.0),
+            padding: EdgeInsets.symmetric(vertical: 150.0, horizontal: 25.0),
 
 
             child: Form(
                 key: _formKey,
                 child: SingleChildScrollView(
                     child: Column(
-                      //mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: <Widget>[
 
                           Container(
-                              height: 350.0,
+                              height: 370.0,
                               width: 450.0,
                               decoration: BoxDecoration(
                                   color: Colors.white,
@@ -96,10 +97,20 @@ class _RegisterState extends State<Register> {
 
                                   child: Column(
                                   children: <Widget>[
-                                    SizedBox(height: 30.0),
+                                    Center(
+                                      child: Image(
+                                        image: AssetImage(
+                                          'images/secure2.png',
+                                        ),
+                                        height: 180.0,
+                                        width: 300.0,
+                                      ),
+                                    ),
+                                    //SizedBox(height: 30.0),
                                     TextFormField(
-                                      decoration: textInputDecoration.copyWith(
-                                          hintText: 'First Name'),
+                                      decoration: textInputDecoration.copyWith(hintText: 'First Name',
+                                        prefixIcon: Icon(Icons.person)),
+
                                       /*decoration: new InputDecoration(
                               labelText:"First Name",
                               fillColor: Colors.white,
@@ -107,25 +118,29 @@ class _RegisterState extends State<Register> {
                               border: new OutlineInputBorder(borderRadius: new BorderRadius.circular (35.0),
                                 //borderSide: new BorderSide(color: Colors.pink, width: 2.0),
                               )
-                              ),
-*/
-                                      validator: (val) =>
-                                      val.isEmpty
-                                          ? 'Enter your First Name'
-                                          : null,
+                              ),*/
+
+                                      validator: (val){
+                                        if(val.isEmpty)
+                                          return 'Please enter your First Name';
+                                        return null;
+                                      },
+
+                                      //validator: (val) => val.isEmpty ? 'Please enter your First Name' : null,
                                       onChanged: (val) {
                                         setState(() => firstName = val);
                                       },
+
 
                                       keyboardType: TextInputType.text,
                                       style: new TextStyle(
                                         fontFamily: "Poppins",
                                       ),
                                     ),
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
                                     TextFormField(
-                                      decoration: textInputDecoration.copyWith(
-                                          hintText: 'Last Name'),
+                                      decoration: textInputDecoration.copyWith(hintText: 'Last Name',
+                                        prefixIcon: Icon(Icons.person)),
                                       /*decoration: new InputDecoration(
                                     labelText:"Last Name",
                                     fillColor: Colors.white,
@@ -134,11 +149,12 @@ class _RegisterState extends State<Register> {
                                       //borderSide: new BorderSide(color: Colors.pink, width: 2.0),
                                     )*/
 
-
-                                    validator: (val) => val.isEmpty ? 'Enter your Last Name' : null,
+                                    validator: (val) => val.isEmpty ? 'Please enter your Last Name' : null,
                                     onChanged: (val) {
                                       setState(() => lastName = val);
                                     },
+
+
 
                                     keyboardType: TextInputType.text,
                                     style: new TextStyle(
@@ -146,15 +162,16 @@ class _RegisterState extends State<Register> {
                                     ),
                                     ),
 
-                                    SizedBox(height: 15.0),
+                                    //SizedBox(height: 15.0),
                                     RaisedButton(
 
-                                        color: Colors.indigo[700],
+                                        //color: Colors.indigo[700],
+                                      color: Colors.lightBlue[600],
                                         shape: RoundedRectangleBorder(
                                             borderRadius: new BorderRadius
                                                 .circular(1000.0),
                                             side: BorderSide(
-                                                color: Colors.indigo[700])
+                                                color: Colors.lightBlue[600])
                                         ),
                                         child: Text(
                                             'Next',
@@ -170,7 +187,7 @@ class _RegisterState extends State<Register> {
                                           );
                                         }
                                     ),
-                                    SizedBox(height: 15.0),
+                                    //SizedBox(height: 15.0),
                                     Text(
                                       error,
                                       style: TextStyle(
