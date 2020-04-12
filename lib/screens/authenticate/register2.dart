@@ -1,4 +1,3 @@
-
 //import 'dart:html';
 
 import 'package:flutter/material.dart';
@@ -49,19 +48,19 @@ class _Register2State extends State<Register2> {
           ),
           constraints: BoxConstraints.expand(),
 
-          padding: EdgeInsets.symmetric(vertical: 25.0, horizontal: 25.0),
+          padding: EdgeInsets.symmetric(vertical: 90.0, horizontal: 25.0),
 
 
           child: Form(
             key: _formKey,
             child: SingleChildScrollView(
                 child: Column(
-                  //mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
                       Container(
                           height: 500.0,
                           width: 450.0,
-
                           decoration: BoxDecoration(
                               color: Colors.white,
                               shape: BoxShape.rectangle,
@@ -75,13 +74,23 @@ class _Register2State extends State<Register2> {
                               ]
                           ),
                           child: Column(
-
                               children: <Widget>[
-                                SizedBox(height: 70.0),
-                                TextFormField(
-                                    decoration: textInputDecoration.copyWith(hintText: 'Email'),
+                                Center(
+                                  child: Image(
+                                    image: AssetImage(
+                                      'images/secure2.png',
+                                    ),
+                                    height: 180.0,
+                                    width: 300.0,
+                                  ),
+                                ),
 
-                                    validator: (val) => val.isEmpty ? 'Enter your Email address' : null,
+                                //SizedBox(height: 70.0),
+                                TextFormField(
+                                    decoration: textInputDecoration.copyWith(hintText: 'Email',
+                                        prefixIcon: Icon(Icons.email)),
+
+                                    validator: (val) => val.isEmpty ? 'Please enter your Email Address' : null,
                                     onChanged: (val){
                                       setState(() => email = val);
                                     },
@@ -91,44 +100,56 @@ class _Register2State extends State<Register2> {
                                       fontFamily: "Raleway",
                                     )
                                 ),
-                                SizedBox(height: 30.0),
+                                //SizedBox(height: 30.0),
                                 TextFormField(
-                                    decoration: textInputDecoration.copyWith(hintText: 'Password'),
+                                    decoration: textInputDecoration.copyWith(hintText: 'Password',
+                                        prefixIcon: Icon(Icons.lock)),
 
-                                    validator: (val) => val.isEmpty ? 'Enter your Password' : null,
+                                    validator: (val) => val.length < 6 ? 'Please enter a passowrd 6+ chars long' : null,
+                                    obscureText: true,
                                     onChanged: (val){
                                       setState(() => password = val);
                                     },
 
                                     keyboardType: TextInputType.visiblePassword,
-                                    obscureText: true,
+                                    //obscureText: true,
                                     style: new TextStyle(
                                       fontFamily: "Raleway",
                                     )
-                                ),
-                                SizedBox(height: 30.0),
-                                TextFormField(
-                                    decoration: textInputDecoration.copyWith(hintText: 'Confirm Password'),
 
-                                    validator: (val) => val.isEmpty ? 'Please confirm your Password' : null,
+                                ),
+                                //SizedBox(height: 30.0),
+                                TextFormField(
+                                    decoration: textInputDecoration.copyWith(hintText: 'Confirm Password',
+                                        prefixIcon: Icon(Icons.lock)),
+
+                                    validator: (val){
+                                      if(val.isEmpty)
+                                        return 'Please Confirm your Password';
+                                      if(val != password)
+                                        return 'Please make sure your passwords match';
+                                      return null;
+                                    },
+                                    //validator: (val) => val ! = val ? 'Please enter an passowrd 6+ chars long' : null,
+                                    obscureText: true,
                                     onChanged: (val){
                                       setState(() => confirmP = val);
                                     },
 
                                     keyboardType: TextInputType.visiblePassword,
-                                    obscureText: true,
+                                    //obscureText: true,
                                     style: new TextStyle(
                                       fontFamily: "Raleway",
                                     )
                                 ),
-
-                                SizedBox(height: 15.0),
+                                //SizedBox(height: 15.0),
                                 RaisedButton(
 
-                                  color: Colors.indigo[700],
+                                  //color: Colors.indigo[700],
+                                  color: Colors.lightBlue[600],
                                   shape: RoundedRectangleBorder(
                                       borderRadius: new BorderRadius.circular(1000.0),
-                                      side: BorderSide(color: Colors.indigo[700])
+                                      side: BorderSide(color: Colors.lightBlue[600])
                                   ),
                                   child: Text(
                                       'Sign Up',
@@ -144,13 +165,13 @@ class _Register2State extends State<Register2> {
                                           loading = false;
                                         });
                                       }else{
-                                        await DatabaseService(uid: result.uid).updateUserData(firstName,lastName);
+                                        await DatabaseService(uid: result.uid).updateUserData(firstName, lastName);
                                         print('User Account Created');
                                       }
                                     }
                                   },
                                 ),
-                                SizedBox(height: 15.0),
+                                //SizedBox(height: 15.0),
 
                                 Text(
                                   error,

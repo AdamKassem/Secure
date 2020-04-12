@@ -17,9 +17,6 @@ class _Database extends State<Database> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Database'),
-        ),
 
         body: Container(
           decoration: BoxDecoration(

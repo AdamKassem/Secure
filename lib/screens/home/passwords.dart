@@ -111,17 +111,6 @@ class _PasswordsState extends State<Passwords> {
                                           borderColor: Colors.yellow,
                                           spacing:0.0
                                       ),
-                                      IconButton(
-                                        icon: Icon(Icons.bookmark),
-                                        color: click && clickCount % 2 == 1 ? Colors.red : Colors.grey,
-                                        iconSize: 20,
-                                        onPressed: () {
-                                         setState(() {
-                                           click = true;
-                                           clickCount++;
-                                         });// HOW DO YOU SEND THE CARD TO DATABASE
-                                        },
-                                      )
                                   ]),
                                 ],
                               ),

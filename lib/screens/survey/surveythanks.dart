@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:secure/screens/home/home.dart';
 import 'package:secure/screens/survey/surveyp.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:secure/services/auth.dart';
 import 'package:secure/services/database.dart';
 import 'package:secure/shared/constants.dart';
 import 'package:secure/shared/loading.dart';
 import 'package:secure/screens/settings/settings.dart';
 
-class Prompt extends StatefulWidget {
+class Surveythanks extends StatefulWidget {
   final Function toggleView;
-  Prompt({this.toggleView});
+  Surveythanks({this.toggleView});
 
   @override
-  _PromptState createState() => new _PromptState();
+  _SurveythanksState createState() => new _SurveythanksState();
 // _MyHomePageState createState() => new _MyHomePageState();
 
 }
 
-class _PromptState extends State<Prompt> {
+class _SurveythanksState extends State<Surveythanks> {
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class _PromptState extends State<Prompt> {
         body: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage('images/Background.jpg'),
+                    image: AssetImage('images/bg.jpg'),
                     fit: BoxFit.cover
                 )
             ),
@@ -56,7 +58,22 @@ class _PromptState extends State<Prompt> {
                       ),
 
                       child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
+                            Padding(
+                              padding: EdgeInsets.all(15.0),
+                              child: new LinearPercentIndicator(
+                                width: MediaQuery.of(context).size.width - 100,
+                                animation: true,
+                                lineHeight: 20.0,
+                                animationDuration: 2500,
+                                percent: 1.0,
+                                center: Text("100.0%"),
+                                linearStrokeCap: LinearStrokeCap.roundAll,
+                                progressColor: Colors.blue,
+                              ),
+                            ),
+
                             Center(
                               child: Image(
                                 image: AssetImage(
@@ -68,23 +85,52 @@ class _PromptState extends State<Prompt> {
                             ),
                             //SizedBox(height: 20.0),
                             //SizedBox(width: 20.0, height: 100.0),
+                            /*SizedBox(
+                              width: 250.0,
+                              child: TypewriterAnimatedTextKit(
+                                //Duration(milliseconds: 2000),
+                                  onTap: () {
+                                    //Duration(milliseconds: 10);
+                                    print("Tap Event");
+                                  },
+                                  text: [
+                                    "Thank you for taking our Survey! Click Finish to access your Profile.",
+                                    /* "Click Next to continue",
+                                             // "In order to generate potential passwords, you will need to answer a few survey
+                                              // questions which are estimated to take about 2 minutes. Click Next to continue",
+                                              "Discipline is the best tool",
+                                              "Design first, then code",
+                                              "Do not patch bugs out, rewrite them",
+                                              "Do not test bugs out, design them out",
+                                              */
+                                  ],
+                                  isRepeatingAnimation: false,
+                                  textStyle: TextStyle(
+                                    color: Colors.lightBlue[600],
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.w700,
+                                    fontFamily: "Bobbers",
+                                  ),
+                                  textAlign: TextAlign.start,
+                                  alignment: AlignmentDirectional.topCenter // or Alignment.topLeft
+                              ),
+                            ),*/
+
 
                             SizedBox(
                               width: 250.0,
                               child: FadeAnimatedTextKit(
                                   duration: Duration(milliseconds: 2000),
-                                  //pause: Duration(milliseconds:  1000),
+                                  //pause: Duration(milliseconds:  5000),
                                   displayFullTextOnTap: true,
                                   //stopPauseOnTap: true,
                                   onTap: () {
                                     print("Tap Event");
                                   },
-
                                   text: [
-                                    "Welcome to Secure!",
-                                    "Please fill out the following survey in order to generate potential passwords. Click Next to proceed."
+                                    "Thank you for taking our Survey!",
+                                    "Click Finish to access your Profile.",
                                   ],
-
                                   // isRepeatingAnimation: false,
 
                                   textStyle: TextStyle(
@@ -97,56 +143,6 @@ class _PromptState extends State<Prompt> {
                                   alignment: AlignmentDirectional.topCenter // or Alignment.topLeft
                               ),
                             ),
-                            /*Row(
-                                  children: <Widget>[
-                                  RotateAnimatedTextKit(
-                                    onTap: () {
-                                      print("Tap Event");
-                                    },
-                                    "do IT!",
-                                                "do it RIGHT!!",
-                                                "do it RIGHT NOW!!!"
-                                  isRepeatingAnimation: false,
-                                    text: ["Please fill out the following survey in order to generate potential passwords. Click Next to proceed."],
-                                  textStyle: TextStyle(
-                                      fontSize: 30.0,
-                                      color: Colors.lightBlue[600],
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily: "Bobbers",
-                                    //textStyle: TextStyle(fontSize: 40.0, fontFamily: "Horizon"),
-                                    //textAlign: TextAlign.start,
-                                    //alignment: AlignmentDirectional.topStart // or Alignment.topLeft
-                                ),*/
-                            /*SizedBox(
-                                          width: 250.0,
-                                          child: TypewriterAnimatedTextKit(
-                                             //Duration(milliseconds: 2000),
-                                              onTap: () {
-                                                //Duration(milliseconds: 10);
-                                                   print("Tap Event");
-                                      },
-                                            text: [
-                                                "Welcome to Secure! Please fill out the following survey in order to generate potential passwords. Click Next to proceed.",
-                                              /* "Click Next to continue",
-                                             // "In order to generate potential passwords, you will need to answer a few survey
-                                              // questions which are estimated to take about 2 minutes. Click Next to continue",
-                                              "Discipline is the best tool",
-                                              "Design first, then code",
-                                              "Do not patch bugs out, rewrite them",
-                                              "Do not test bugs out, design them out",
-                                              */
-                                            ],
-                                              isRepeatingAnimation: false,
-                                              textStyle: TextStyle(
-                                                color: Colors.lightBlue[600],
-                                                fontSize: 30.0,
-                                                fontWeight: FontWeight.w700,
-                                                fontFamily: "Bobbers",
-                                              ),
-                                            textAlign: TextAlign.start,
-                                            alignment: AlignmentDirectional.topCenter // or Alignment.topLeft
-                                          ),
-                                        ),*/
 
                             //SizedBox(height: 20.0),
                             RaisedButton(
@@ -158,7 +154,7 @@ class _PromptState extends State<Prompt> {
                                         color: Colors.lightBlue[600])
                                 ),
                                 child: Text(
-                                    'Next',
+                                    'Finish',
                                     style: TextStyle(
                                         color: Colors.white)
                                 ),
@@ -166,7 +162,7 @@ class _PromptState extends State<Prompt> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(builder: (context) =>
-                                          Surveyp())
+                                          Home())
                                   );
                                 }
                             ),

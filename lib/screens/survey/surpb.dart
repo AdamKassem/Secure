@@ -42,7 +42,7 @@ class _Surpb extends State<Surpb> {
             ),
             constraints: BoxConstraints.expand(),
 
-            padding: EdgeInsets.symmetric(vertical: 25.0, horizontal: 25.0),
+            padding: EdgeInsets.symmetric(vertical: 40.0, horizontal: 25.0),
 
 
             child: Form(
@@ -90,9 +90,40 @@ class _Surpb extends State<Surpb> {
                                     //child: Column(
                                     // children: <Widget>[
                                     SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  '   6. Who is your favourite music artist?',
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
+
                                     TextFormField(
                                       decoration: textInputDecoration.copyWith(
-                                          hintText: 'Question 6'),
+                                        hintText: 'Question 6',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty? 'Please enter answer': null,
                                       onChanged: (val) {
@@ -104,9 +135,39 @@ class _Surpb extends State<Surpb> {
                                         fontFamily: "Poppins",
                                       ),
                                     ),
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  '   7. What is your favourite sport to play/watch?',
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
                                     TextFormField(
-                                      decoration: textInputDecoration.copyWith(hintText: 'Question 7'),
+                                      decoration: textInputDecoration.copyWith(hintText: 'Question 7',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty ? 'Please Enter your answer' : null,
                                       onChanged: (val) {
@@ -119,10 +180,40 @@ class _Surpb extends State<Surpb> {
                                       ),
                                     ),
 
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  '   8. What is your favourite/comfort food?',
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
                                     TextFormField(
                                       decoration: textInputDecoration.copyWith(
-                                          hintText: 'Question 8'),
+                                        hintText: 'Question 8',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty? 'Please enter answer': null,
                                       onChanged: (val) {
@@ -134,9 +225,39 @@ class _Surpb extends State<Surpb> {
                                         fontFamily: "Poppins",
                                       ),
                                     ),
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  '   9. What is your favourite piece of clothing?',
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
                                     TextFormField(
-                                      decoration: textInputDecoration.copyWith(hintText: 'Question 9'),
+                                      decoration: textInputDecoration.copyWith(hintText: 'Question 9',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty ? 'Please Enter your answer' : null,
                                       onChanged: (val) {
@@ -149,10 +270,40 @@ class _Surpb extends State<Surpb> {
                                       ),
                                     ),
 
-                                    SizedBox(height: 30.0),
+                                    //SizedBox(height: 30.0),
+                                    Expanded(
+                                      child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.start,
+                                          children: <Widget>[
+                                            Align(
+                                                alignment: Alignment.centerLeft,
+                                                child: Text(
+                                                  '   10. What is a topic you are very passionate about?',
+                                                  style: TextStyle(
+                                                    color: Colors.lightBlue[600],
+                                                    fontSize: 15.0,
+                                                    fontWeight: FontWeight.w600,
+                                                    fontFamily: "Bobbers",
+
+                                                  ),
+                                                )
+                                            )
+                                          ]
+                                      ),
+                                    ),
                                     TextFormField(
                                       decoration: textInputDecoration.copyWith(
-                                          hintText: 'Question 10'),
+                                        hintText: 'Question 10',
+                                        enabledBorder: new UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                              color: Colors.blue,
+                                              width: 1.0,
+                                              style: BorderStyle.solid
+                                          ),
+
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
+                                      ),
 
                                       validator: (val) => val.isEmpty? 'Please enter answer': null,
                                       onChanged: (val) {
@@ -167,12 +318,12 @@ class _Surpb extends State<Surpb> {
                                     SizedBox(height: 15.0),
                                     RaisedButton(
 
-                                        color: Colors.indigo[700],
+                                        color: Colors.lightBlue[600],
                                         shape: RoundedRectangleBorder(
                                             borderRadius: new BorderRadius
                                                 .circular(1000.0),
                                             side: BorderSide(
-                                                color: Colors.indigo[700])
+                                                color: Colors.lightBlue[600])
                                         ),
                                         child: Text(
                                             'Continue',

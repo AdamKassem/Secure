@@ -11,7 +11,7 @@ class Settings extends StatelessWidget {
         backgroundColor: Colors.blue[400],
         appBar: AppBar(
           title: Text('Secure Settings'),
-          backgroundColor: Colors.blue[500],
+          backgroundColor: Colors.indigo[900],
           elevation: 0.0,
         ),
         body: Container(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:secure/screens/authenticate/sign_in.dart';
 import 'package:secure/screens/home/database.dart';
 import 'package:secure/screens/home/fav.dart';
 import 'package:secure/screens/home/insta.dart';
@@ -8,6 +9,9 @@ import 'package:secure/screens/settings/settings.dart';
 navigateToPasswords(context) async{
   Navigator.push(context, MaterialPageRoute(builder: (context) => Passwords()));
 }
+//_goSettings(context) async{
+//  Navigator.push(context, MaterialPageRoute(builder: (context) => Settings()));
+//}
 
 /*
 navigateToFav(context) async{
@@ -23,6 +27,7 @@ navigateToInsta(context) async{
 
 class Home extends StatefulWidget {
   final Function toggleView;
+
 
   Home({this.toggleView});
 
@@ -42,9 +47,12 @@ class _HomeState extends State<Home>{
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = Passwords(); // Our first view in viewport
 
-
   @override
   Widget build(BuildContext context) {
+//    void _goSettings(){
+//      Navigator.pushNamed(context, "/settings");
+//    }
+
     return Scaffold(
       // background picture settings
       backgroundColor: Colors.transparent,
@@ -53,33 +61,23 @@ class _HomeState extends State<Home>{
         bucket: bucket,
       ),
 
-      /*body: Container(
-            decoration: BoxDecoration(
-            image: DecorationImage(
-            image: AssetImage("images/bg.jpg"),
-            fit: BoxFit.cover,
-            )
-            ),
-            constraints: BoxConstraints.expand(),
-            ),*/
 
-      // get rid of this and add the card view
-      appBar: AppBar(
-        title: Text('Secure'),
-        backgroundColor: Colors.black,
-        elevation: 0.0,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Settings()),
-              );
-            },
-          )
-        ],
-      ),
+//      appBar: AppBar(
+//        title: Text('Secure'),
+//        backgroundColor: Colors.black,
+//        elevation: 0.0,
+//        actions: <Widget>[
+//          IconButton(
+//            icon: Icon(Icons.settings),
+//            onPressed: () {
+//              Navigator.push(
+//                context,
+//                MaterialPageRoute(builder: (context) => Settings()),
+//              );
+//            },
+//          )
+//        ],
+//      ),
 
 //Home button code
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -180,7 +178,7 @@ class _HomeState extends State<Home>{
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.center_focus_weak,
+                          Icons. account_circle,
                           color: currentTab == 2 ? Colors.pink : Colors.grey,
                         ),
                         Text(
@@ -201,8 +199,11 @@ class _HomeState extends State<Home>{
                             child: Column(
                               children: <Widget>[
                                 ListTile(
-                                  leading: Icon(Icons.settings),
+                                  leading: Icon(Icons.exit_to_app),
                                   title: Text("Sign Out"),
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn()));
+                                  }
                                 )
                               ],
                             )
@@ -238,122 +239,5 @@ class _HomeState extends State<Home>{
   }
 }
 
-/*
-import 'package:flutter/material.dart';
-import 'package:secure/screens/settings/settings.dart';
-import 'package:secure/screens/home/fav.dart';
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.blue[400],
-      appBar: AppBar(
-        title: Text('Secure'),
-        backgroundColor: Colors.blue[500],
-        elevation: 0.0,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: () async {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Settings()),
-              );
-            },
-          ),
-          SizedBox(height: 15.0),
-          RaisedButton(
-              color: Colors.indigo[700],
-              shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius
-                      .circular(1000.0),
-                  side: BorderSide(
-                      color: Colors.indigo[700])
-              ),
-              child: Text(
-                  'Next',
-                  style: TextStyle(
-                      color: Colors.white)
-              ),
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            Fav())
-                );
-              }
-          ),
-        ],
-      )
-    );
-  }
-}
-*/
 
-/*class MyDrawer extends StatelessWidget{
-  @override
-  Widget build(BuildContext context){
-    return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          navigateToHome(context);
-        },
-        child: Icon(Icons.home),
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.amber[900],
-      ),
-      bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
-          color: Colors.blue[200],
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
-                IconButton(
-                  iconSize: 30.0,
-                  padding: EdgeInsets.only(left: 28.0),
-                  icon: Icon(Icons.star),
-                  color: Colors.white,
-                  onPressed: () {
-                    navigateToFav(context);
-                    // favorite page
-                  },
-                ),
-                IconButton(
-                  icon: Icon(Icons.folder),
-                  color: Colors.white,
-                  onPressed: () {},
-                  // redirect to database page
-                ),
-                IconButton(
-                  icon: Icon(Icons.center_focus_weak),
-                  color: Colors.white,
-                  onPressed: () {},
-                ),
-                IconButton(
-                  icon: Icon(Icons.menu),
-                  color: Colors.white,
-                  onPressed: () => showModalBottomSheet(
-                      context: context,
-                      builder: (context) => Drawer(
-                          child: Column(
-                            children: <Widget>[
-                              ListTile(
-                                leading: Icon(Icons.settings),
-                                title: Text("Sign Out"),
-//                                onTap:
-                              )
-                            ],
-                          )
-                      )
-                  ),
-                ),
-              ]
-          )
-      ),
-    );
-  }
-}
-*/
+
