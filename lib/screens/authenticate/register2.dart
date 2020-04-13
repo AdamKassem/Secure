@@ -7,11 +7,11 @@ import 'package:secure/services/database.dart';
 import 'package:secure/shared/constants.dart';
 import 'package:secure/shared/loading.dart';
 
-
 class Register2 extends StatefulWidget {
-
+  final String firstName;
+  final String lastName;
   final Function toggleView;
-  Register2({this.toggleView});
+  Register2({this.toggleView, this.firstName, this.lastName});
 
   @override
   _Register2State createState() => _Register2State();
@@ -34,7 +34,8 @@ class _Register2State extends State<Register2> {
   @override
   Widget build(BuildContext context) {
 
-
+    firstName = widget.firstName;
+    lastName = widget.lastName;
 
     return loading ? Loading() : Scaffold(
 
@@ -167,6 +168,7 @@ class _Register2State extends State<Register2> {
                                       }else{
                                         await DatabaseService(uid: result.uid).updateUserData(firstName, lastName);
                                         print('User Account Created');
+                                        Navigator.pop(context);
                                       }
                                     }
                                   },
@@ -185,15 +187,13 @@ class _Register2State extends State<Register2> {
                                         side: BorderSide(color: Colors.indigo[700])
                                     ),
                                     child: Text(
-                                        'Survey',
+                                        'Sign In',
                                         style: TextStyle(color: Colors.white)
                                     ),
-                                    onPressed: (){
-                                      Navigator.push(
-                                          context,
-                                          MaterialPageRoute(builder: (context) => Prompt())
-                                      );
-                                    }
+                                    onPressed: () async {
+                                      widget.toggleView();
+                                      Navigator.pop(context);
+                                    },
                                 )
                               ]
                           )

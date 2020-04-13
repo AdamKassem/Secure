@@ -183,7 +183,7 @@ class _SignInState extends State<SignIn> {
                                 ),
                                 onPressed: () async {
                                   widget.toggleView();
-                        },
+                                },
                       ),
                     ]
                 ),

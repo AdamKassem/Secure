@@ -183,7 +183,11 @@ class _RegisterState extends State<Register> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      Register2())
+                                                      Register2(
+                                                        toggleView: widget.toggleView,
+                                                        firstName: firstName,
+                                                        lastName: lastName
+                                                      ))
                                           );
                                         }
                                     ),

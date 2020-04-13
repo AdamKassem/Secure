@@ -18,7 +18,10 @@ class _Insta extends State<Insta> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Insta'),
+          title: Text('Profile'),
+          centerTitle: true,
+          backgroundColor: Colors.indigo,
+          elevation: 0.0,
         ),
         body: Container(
           decoration: BoxDecoration(

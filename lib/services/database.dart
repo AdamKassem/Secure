@@ -10,9 +10,11 @@ class DatabaseService {
   final CollectionReference userData = Firestore.instance.collection('userData');
 
   Future updateUserData(String firstName, lastName) async {
+    List responses = new List();
     return await userData.document(uid).setData({
       'firstName': firstName,
       'lastName': lastName,
+      'responses': responses
     });
   }
 
@@ -22,11 +24,13 @@ class DatabaseService {
       uid: uid,
       firstName: snapshot.data['firstName'],
       lastName: snapshot.data['lastName'],
+      passwords: snapshot.data['passwords'],
+      responses: snapshot.data['responses']
     );
   }
 
   // Get user doc stream
-  Stream<UserData> get data {
+  Stream<UserData> get userInfo {
     return userData.document(uid).snapshots()
       .map(_userDataFromSnapshot);
   }

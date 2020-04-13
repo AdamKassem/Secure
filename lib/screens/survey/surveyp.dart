@@ -1,7 +1,10 @@
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:provider/provider.dart';
+import 'package:secure/models/user.dart';
 import 'package:secure/screens/survey/surpb.dart';
 import 'package:secure/services/auth.dart';
 import 'package:secure/services/database.dart';
@@ -33,6 +36,7 @@ class _Surveyp extends State<Surveyp> {
 
   @override
   Widget build(BuildContext context) {
+    User user = Provider.of<User>(context);
     return Scaffold(
         body: Container(
           decoration: BoxDecoration(
@@ -344,7 +348,12 @@ class _Surveyp extends State<Surveyp> {
                                                             style: TextStyle(
                                                                 color: Colors.white)
                                                         ),
-                                                        onPressed: () {
+                                                        onPressed: () async {
+                                                          DocumentReference docRef = Firestore.instance.collection('userData').document(user.uid);
+                                                          DocumentSnapshot doc = await docRef.get();
+                                                          List items = doc.data['responses'];
+                                                          List answers = [Qone.toLowerCase(),Qtwo.toLowerCase(),Qthree.toLowerCase(),Qfour.toLowerCase(),Qfive.toLowerCase()];
+                                                          docRef.updateData({'responses':FieldValue.arrayUnion(answers)});
                                                           Navigator.push(
                                                               context,
                                                               MaterialPageRoute(
