@@ -49,7 +49,7 @@ class _Register2State extends State<Register2> {
           ),
           constraints: BoxConstraints.expand(),
 
-          padding: EdgeInsets.symmetric(vertical: 90.0, horizontal: 25.0),
+          padding: EdgeInsets.fromLTRB(25, 75, 25, 0),
 
 
           child: Form(
@@ -166,7 +166,7 @@ class _Register2State extends State<Register2> {
                                           loading = false;
                                         });
                                       }else{
-                                        await DatabaseService(uid: result.uid).updateUserData(firstName, lastName);
+                                        await DatabaseService(uid: result.uid).updateUserData(firstName, lastName, email);
                                         print('User Account Created');
                                         Navigator.pop(context);
                                       }

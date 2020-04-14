@@ -183,7 +183,7 @@ class _HomeState extends State<Home>{
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.center_focus_weak,
+                          Icons.account_circle,
                           color: currentTab == 2 ? Colors.pink : Colors.grey,
                         ),
                         Text(
