@@ -6,6 +6,7 @@ import 'package:secure/models/user_data.dart';
 import 'package:secure/screens/home/home.dart';
 import 'package:secure/services/database.dart';
 import 'package:secure/shared/loading.dart';
+import 'package:smooth_star_rating/smooth_star_rating.dart';
 //import 'package:secure/screens/home/settings.dart';
 
 class Fav extends StatefulWidget {
@@ -90,6 +91,7 @@ class _FavState extends State<Fav> {
                         itemCount: items.length,
                         itemBuilder: (context, index) {
                           String PassNum = 'Password ' + (index + 1).toString();
+                          var rate = int.parse(items[index].toString().substring(0,1));
                           return Dismissible(
                             key: Key(items[index]),
                             background: Container(
@@ -111,29 +113,20 @@ class _FavState extends State<Fav> {
                             },
                             direction: DismissDirection.endToStart,
                             child: Card(
-                              elevation: 5,
+                              // what the list view returns
+                              elevation: 20,
                               child: Container(
                                 height: 100.0,
                                 child: Row(
+                                  mainAxisSize: MainAxisSize.min,
                                   children: <Widget>[
                                     Container(
-                                      height: 100.0,
-                                      width: 80.0,
-                                      decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.only(
-                                              bottomLeft: Radius.circular(5),
-                                              topLeft: Radius.circular(5)),
-                                          image: DecorationImage(
-                                            fit: BoxFit.fitWidth,
-                                            image:
-                                                AssetImage('images/secure3.png'),
-                                          )),
-                                    ),
-                                    Container(
-                                      height: 100,
+                                      // contains the rest of the card
+                                      height: 80,
+                                      width: MediaQuery.of(context).size.width-10,
                                       child: Padding(
                                         padding:
-                                            EdgeInsets.fromLTRB(15, 10, 0, 0),
+                                            EdgeInsets.fromLTRB(20, 10, 5, 0),
                                         child: Column(
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
@@ -141,43 +134,86 @@ class _FavState extends State<Fav> {
                                             Text(
                                               PassNum,
                                             ),
-                                            Padding(
-                                              padding:
-                                                  EdgeInsets.fromLTRB(0, 3, 0, 3),
-                                              child: Container(
-                                                width: 30,
-                                                decoration: BoxDecoration(
-                                                    border: Border.all(
-                                                        color: Colors.teal),
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                            Radius.circular(10))),
-                                                child: Text(
-                                                  "🔒",
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
+                                            Container(
+                                              //padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                              width:
+                                                  90, // length of border line
+                                              decoration: BoxDecoration(
+                                                  border: Border.all(
+                                                      color: Colors.teal),
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(10))),
                                             ),
                                             Padding(
-                                              padding:
-                                                  EdgeInsets.fromLTRB(0, 5, 0, 2),
-                                              child: Container(
-                                                width: 260,
-                                                child: Text(
-                                                  items[index]
-                                                      .toString()
-                                                      .substring(1),
-                                                  style: TextStyle(
-                                                      fontSize: 15,
-                                                      color: Color.fromARGB(
-                                                          255, 48, 48, 54)),
-                                                ),
-                                              ),
-                                            )
+                                              padding: EdgeInsets.fromLTRB(
+                                                  0, 12, 0, 0),
+                                              child: Row(
+//                                  Padding(
+//                                     padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
+                                                  children: <Widget>[
+                                                    Container(
+                                                      width: 240,
+                                                      child: Text(
+                                                        items[index].toString().substring(1),
+                                                        style: TextStyle(
+                                                            fontSize: 15,
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    48,
+                                                                    48,
+                                                                    54)),
+                                                      ),
+                                                    ),
+                                                    SmoothStarRating(
+                                                        allowHalfRating: false,
+                                                        onRatingChanged:
+                                                            (value) {
+                                                          setState(() {
+                                                            DocumentReference docRef = Firestore.instance
+                                                                .collection('userData')
+                                                                .document(user.uid);
+                                                            String s = items[index];
+                                                            String add = value.toInt().toString() + s.substring(1);
+                                                            docRef.updateData({
+                                                              'passwords': FieldValue.arrayUnion([add])
+                                                            });
+                                                            docRef.updateData({
+                                                              'passwords': FieldValue.arrayRemove([s])
+                                                            });
+                                                          });
+                                                        },
+                                                        starCount: 5,
+                                                        rating: rate.toDouble(),
+                                                        size: 20.0,
+                                                        filledIconData:
+                                                            Icons.star,
+                                                        halfFilledIconData:
+                                                            Icons.star_half,
+                                                        defaultIconData:
+                                                            Icons.star_border,
+                                                        color: Colors.blue,
+                                                        borderColor:
+                                                            Colors.blue,
+                                                        spacing: 0.0),
+                                                    /*IconButton(
+                                                icon: Icon(Icons.bookmark),
+                                                color: click && clickCount % 2 == 1 ? Colors.red : Colors.grey,
+                                                iconSize: 20,
+                                                onPressed: () {
+                                                  setState(() {
+                                                    click = true;
+                                                    clickCount++;
+                                                  });// HOW DO YOU SEND THE CARD TO DATABASE
+                                                },
+                                              )*/
+                                                  ]),
+                                            ),
                                           ],
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),

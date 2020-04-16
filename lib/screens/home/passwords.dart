@@ -186,9 +186,9 @@ class _PasswordsState extends State<Passwords> {
                                                             Icons.star_half,
                                                         defaultIconData:
                                                             Icons.star_border,
-                                                        color: Colors.yellow,
+                                                        color: Colors.blue,
                                                         borderColor:
-                                                            Colors.yellow,
+                                                            Colors.blue,
                                                         spacing: 0.0),
                                                     /*IconButton(
                                                 icon: Icon(Icons.bookmark),
