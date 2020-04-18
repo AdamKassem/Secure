@@ -67,7 +67,7 @@ class _RegisterState extends State<Register> {
             ),
             constraints: BoxConstraints.expand(),
 
-            padding: EdgeInsets.symmetric(vertical: 150.0, horizontal: 25.0),
+            padding: EdgeInsets.fromLTRB(25, 75, 25, 0),
 
 
             child: Form(
@@ -183,7 +183,11 @@ class _RegisterState extends State<Register> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      Register2())
+                                                      Register2(
+                                                        toggleView: widget.toggleView,
+                                                        firstName: firstName,
+                                                        lastName: lastName
+                                                      ))
                                           );
                                         }
                                     ),
