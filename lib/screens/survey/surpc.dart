@@ -107,8 +107,9 @@ class _Surpc extends State<Surpc> {
 
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 11',
-                                      enabledBorder: new UnderlineInputBorder(
+                                      hintText: '         Answer Question 11',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -45),
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -116,7 +117,7 @@ class _Surpc extends State<Surpc> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please enter answer'
@@ -150,8 +151,9 @@ class _Surpc extends State<Surpc> {
                                   ),
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 12',
-                                      enabledBorder: new UnderlineInputBorder(
+                                      hintText: '         Answer Question 12',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -45),
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -159,7 +161,7 @@ class _Surpc extends State<Surpc> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please Enter your answer'
@@ -194,8 +196,9 @@ class _Surpc extends State<Surpc> {
                                   ),
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 13',
-                                      enabledBorder: new UnderlineInputBorder(
+                                      hintText: '         Answer Question 13',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -45),
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -203,7 +206,7 @@ class _Surpc extends State<Surpc> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please enter answer'
@@ -237,8 +240,9 @@ class _Surpc extends State<Surpc> {
                                   ),
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 14',
-                                      enabledBorder: new UnderlineInputBorder(
+                                      hintText: '         Answer Question 14',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -45),
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -246,7 +250,7 @@ class _Surpc extends State<Surpc> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please Enter your answer'
@@ -281,8 +285,9 @@ class _Surpc extends State<Surpc> {
                                   ),
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 15',
-                                      enabledBorder: new UnderlineInputBorder(
+                                      hintText: '         Answer Question 15',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -30),
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -290,7 +295,7 @@ class _Surpc extends State<Surpc> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please enter answer'

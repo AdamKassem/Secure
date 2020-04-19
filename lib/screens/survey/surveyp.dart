@@ -107,9 +107,10 @@ class _Surveyp extends State<Surveyp> {
 
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 1',
+                                      hintText: '       Answer Question 1',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -45),
                                       //focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
-                                      enabledBorder: new UnderlineInputBorder(
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -117,7 +118,7 @@ class _Surveyp extends State<Surveyp> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please enter answer'
@@ -153,8 +154,9 @@ class _Surveyp extends State<Surveyp> {
 
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 2',
-                                      enabledBorder: new UnderlineInputBorder(
+                                      hintText: '       Answer Question 2',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -45),
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -162,7 +164,7 @@ class _Surveyp extends State<Surveyp> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please Enter your answer'
@@ -199,8 +201,9 @@ class _Surveyp extends State<Surveyp> {
 
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 3',
-                                      enabledBorder: new UnderlineInputBorder(
+                                      hintText: '       Answer Question 3',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -45),
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -208,7 +211,7 @@ class _Surveyp extends State<Surveyp> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please enter answer'
@@ -243,8 +246,9 @@ class _Surveyp extends State<Surveyp> {
                                   ),
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 4',
-                                      enabledBorder: new UnderlineInputBorder(
+                                      hintText: '       Answer Question 4',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -45),
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -252,7 +256,7 @@ class _Surveyp extends State<Surveyp> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please Enter your answer'
@@ -288,8 +292,9 @@ class _Surveyp extends State<Surveyp> {
                                   ),
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: 'Question 5',
-                                      enabledBorder: new UnderlineInputBorder(
+                                      hintText: '         Answer Question 5',
+                                      contentPadding: EdgeInsets.symmetric(vertical: -30),
+                                      /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
                                             color: Colors.blue,
                                             width: 1.0,
@@ -297,7 +302,7 @@ class _Surveyp extends State<Surveyp> {
                                       ),
                                       focusedBorder: UnderlineInputBorder(
                                           borderSide:
-                                              BorderSide(color: Colors.blue)),
+                                              BorderSide(color: Colors.blue)),*/
                                     ),
                                     validator: (val) => val.isEmpty
                                         ? 'Please enter answer'
