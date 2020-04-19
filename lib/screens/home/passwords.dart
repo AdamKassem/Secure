@@ -37,12 +37,6 @@ class _PasswordsState extends State<Passwords> {
     User user = Provider.of<User>(context);
     return SafeArea(
       child: Scaffold(
-          appBar: AppBar(
-            title: Text('Rank Passwords'),
-            centerTitle: true,
-            backgroundColor: Colors.indigo,
-            elevation: 0.0,
-          ),
 
           // NEED TO IMPLEMENT THE REFRESH FUNCTION ***************************
           floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
@@ -73,7 +67,7 @@ class _PasswordsState extends State<Passwords> {
                   image: DecorationImage(
                       image: AssetImage('images/bg.jpg'), fit: BoxFit.cover)),
               constraints: BoxConstraints.expand(),
-
+              padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
               // creates the array to hold the number of each card
               // listview calls the function
               child: StreamBuilder(
@@ -121,7 +115,8 @@ class _PasswordsState extends State<Passwords> {
                       return ListView.builder(
                           itemCount: passwords.length,
                           itemBuilder: (context, index) {
-                            String PassNum = 'Password ' + (index + 1).toString();
+                            String PassNum =
+                                'Password ' + (index + 1).toString();
                             return new Card(
                               // what the list view returns
                               elevation: 20,
@@ -145,12 +140,14 @@ class _PasswordsState extends State<Passwords> {
                                             ),
                                             Container(
                                               //padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
-                                              width: 90, // length of border line
+                                              width:
+                                                  90, // length of border line
                                               decoration: BoxDecoration(
                                                   border: Border.all(
                                                       color: Colors.teal),
-                                                  borderRadius: BorderRadius.all(
-                                                      Radius.circular(10))),
+                                                  borderRadius:
+                                                      BorderRadius.all(
+                                                          Radius.circular(10))),
                                             ),
                                             Padding(
                                               padding: EdgeInsets.fromLTRB(
@@ -165,13 +162,18 @@ class _PasswordsState extends State<Passwords> {
                                                         passwords[index],
                                                         style: TextStyle(
                                                             fontSize: 15,
-                                                            color: Color.fromARGB(
-                                                                255, 48, 48, 54)),
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    48,
+                                                                    48,
+                                                                    54)),
                                                       ),
                                                     ),
                                                     SmoothStarRating(
                                                         allowHalfRating: false,
-                                                        onRatingChanged: (value) {
+                                                        onRatingChanged:
+                                                            (value) {
                                                           setState(() {
                                                             rate[index] = value;
                                                             rating = true;
