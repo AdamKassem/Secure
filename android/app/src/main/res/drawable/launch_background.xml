@@ -7,7 +7,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src= "@drawable/secure2" />
+            android:src= "@drawable/secure_spsc" />
         <!--android:src="@mipmap/launch_image" />-->
         </item>
 </layer-list>
