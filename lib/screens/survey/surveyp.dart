@@ -275,12 +275,12 @@ class _Surveyp extends State<Surveyp> {
                                   Expanded(
                                     child: Column(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.start,
+                                        MainAxisAlignment.start,
                                         children: <Widget>[
                                           Align(
                                               alignment: Alignment.centerLeft,
                                               child: Text(
-                                                '   5. What is the name of your favorite television show/movie character?',
+                                                '   5. What is the name of your favorite television \n        show/movie character?',
                                                 style: TextStyle(
                                                   color: Colors.lightBlue[600],
                                                   fontSize: 15.0,
@@ -364,5 +364,6 @@ class _Surveyp extends State<Surveyp> {
                             )
                       ]))))),
     );
+
   }
 }

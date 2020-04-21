@@ -273,7 +273,7 @@ class _Surpc extends State<Surpc> {
                                           Align(
                                               alignment: Alignment.centerLeft,
                                               child: Text(
-                                                "   15. What’s the last name of your third grade teacher?",
+                                                "   15. What’s the last name of your third grade \n          teacher?",
                                                 style: TextStyle(
                                                   color: Colors.lightBlue[600],
                                                   fontSize: 15.0,

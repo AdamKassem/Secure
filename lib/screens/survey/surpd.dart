@@ -95,7 +95,7 @@ class _Surpd extends State<Surpd> {
                                           Align(
                                               alignment: Alignment.centerLeft,
                                               child: Text(
-                                                "   16. What’s the name of the primary school you attended?",
+                                                "   16. What’s the name of the primary school you \n          attended?",
                                                 style: TextStyle(
                                                   color: Colors.lightBlue[600],
                                                   fontSize: 15.0,
@@ -273,7 +273,7 @@ class _Surpd extends State<Surpd> {
                                           Align(
                                               alignment: Alignment.centerLeft,
                                               child: Text(
-                                                "   20. What is the middle name of a close family member?",
+                                                "   20. What is the middle name of a close family \n          member?",
                                                 style: TextStyle(
                                                   color: Colors.lightBlue[600],
                                                   fontSize: 15.0,
