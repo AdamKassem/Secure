@@ -107,7 +107,7 @@ class _Surveyp extends State<Surveyp> {
 
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: '       Answer Question 1',
+                                      hintText: '        Answer Question 1',
                                       contentPadding: EdgeInsets.symmetric(vertical: -45),
                                       //focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: Colors.blue)),
                                       /*enabledBorder: new UnderlineInputBorder(
@@ -154,7 +154,7 @@ class _Surveyp extends State<Surveyp> {
 
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: '       Answer Question 2',
+                                      hintText: '        Answer Question 2',
                                       contentPadding: EdgeInsets.symmetric(vertical: -45),
                                       /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
@@ -201,7 +201,7 @@ class _Surveyp extends State<Surveyp> {
 
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: '       Answer Question 3',
+                                      hintText: '        Answer Question 3',
                                       contentPadding: EdgeInsets.symmetric(vertical: -45),
                                       /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
@@ -246,7 +246,7 @@ class _Surveyp extends State<Surveyp> {
                                   ),
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: '       Answer Question 4',
+                                      hintText: '        Answer Question 4',
                                       contentPadding: EdgeInsets.symmetric(vertical: -45),
                                       /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
@@ -292,7 +292,7 @@ class _Surveyp extends State<Surveyp> {
                                   ),
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: '         Answer Question 5',
+                                      hintText: '        Answer Question 5',
                                       contentPadding: EdgeInsets.symmetric(vertical: -30),
                                       /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(

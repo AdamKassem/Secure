@@ -285,7 +285,7 @@ class _Surpb extends State<Surpb> {
                                   ),
                                   TextFormField(
                                     decoration: textInputDecoration.copyWith(
-                                      hintText: '       Answer Question 10',
+                                      hintText: '        Answer Question 10',
                                       contentPadding: EdgeInsets.symmetric(vertical: -30),
                                       /*enabledBorder: new UnderlineInputBorder(
                                         borderSide: BorderSide(
