@@ -92,7 +92,10 @@ class _HomeState extends State<Home>{
         backgroundColor: Colors.amber[900],
         heroTag: "btn1",
         onPressed: () {
-          navigateToPasswords(context);
+          setState(() {
+            currentScreen = Passwords();
+            currentTab = -1;
+          });
         },
       ),
       //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
